@@ -26,7 +26,7 @@
     "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
   },
   "scripts": {
-    "install": "echo running_install && node-pre-gyp install --fallback-to-build",
+    "install": "echo 'run manually: node-pre-gyp install --fallback-to-build'",
     "test": "node --napi-modules ./test/ci_test.js",
     "test:bindings": "node --napi-modules ./test/test_binding.js",
     "xcode": "node-pre-gyp configure --debug -- -f xcode",
