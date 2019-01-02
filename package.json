@@ -26,14 +26,14 @@
     "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install": "echo running_install && node-pre-gyp install --fallback-to-build",
     "test": "node --napi-modules ./test/ci_test.js",
     "test:bindings": "node --napi-modules ./test/test_binding.js",
     "xcode": "node-pre-gyp configure --debug -- -f xcode",
-    "build:source": "node-pre-gyp install --build-from-source",
-    "build:package": "node-pre-gyp configure build package",
-    "build:publish": "node-pre-gyp-github publish",
-    "build:test": "node-pre-gyp install --fallback-to-build=false"
+    "build:source": "echo running_b_source && node-pre-gyp install --build-from-source",
+    "build:package": "echo running_b_package && node-pre-gyp configure build package",
+    "build:publish": "echo running_b_publish && node-pre-gyp-github publish",
+    "build:test": "echo running_b_test && node-pre-gyp install --fallback-to-build=false"
   },
   "binary": {
     "module_name": "bleno_mac",
